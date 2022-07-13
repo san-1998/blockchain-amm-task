@@ -198,7 +198,7 @@ const MainComponent = () => {
   const fetchReservesFromPairContract = async () => {
     try {
       const reserves = await PairContract.methods.getReserves().call();
-      setReserves(reserves);
+      setReserves(reserves); 
     } catch (error) {
       console.log("fetchReservesFromPair", error);
     }
@@ -597,7 +597,7 @@ const MainComponent = () => {
             web3.utils.toWei(remove.busdLpBalance.toString()),
             web3.utils.toWei(remove.bustBalance.toString()),
             userAddress,
-            deadline
+            deadline 
           )
           .send({ from: userAddress });
 
@@ -725,7 +725,7 @@ const MainComponent = () => {
             </div>
           </>
         ) : null}
-      </styles.walletConnector>
+      </styles.walletConnector>  
 
       <div className="parent-wrap">
         <div className="wrap">
@@ -752,8 +752,8 @@ const MainComponent = () => {
                             style={{
                               display: "flex",
                               justifyContent: "space-between",
-                            }}
-                          >
+                            }}>
+
                             <div style={{ padding: "5px" }}>
                               <label>
                                 <span style={{ color: "rgb(40,13,95)" }}>
